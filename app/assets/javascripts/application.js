@@ -15,3 +15,23 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .
+
+// 1. assign out html element to a variable
+// 2. listen for a click event
+// 3. in the click event callback function, change the html elements text
+
+$(function() {
+  var body = $('body');
+  body.click(changeTitleColor)
+})
+
+function getRandomColor() {
+  return "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});}
+  
+function changeTitleColor(event) {
+    var color = getRandomColor();
+    var title = $('h1');
+    title.css('color', color)
+}
+
+     
