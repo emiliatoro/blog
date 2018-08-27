@@ -41,4 +41,6 @@ Rails.application.configure do
   
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   
+  ENV["DARK_SKY_API_KEY"] = "c83938736330cb2ae60ce5e4c4d9598b"
+  
 end
